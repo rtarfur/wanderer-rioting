@@ -1,0 +1,36 @@
+version: "0.1"
+
+services:
+  db:
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-new:/var/lib/postgresql/data
+
+  wanderer:
+    environment:
+      PORT: 4444
+      DB_HOST: db
+      WEB_APP_URL: "http://localhost:4444"
+      ERL_AFLAGS: "-kernel shell_history enabled"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 4444:4444
+    volumes:
+      - ..:/app:delegated
+      - ~/.gitconfig:/root/.gitconfig
+      - ~/.gitignore:/root/.gitignore
+      - ~/.ssh:/root/.ssh
+      - elixir-artifacts:/opt/elixir-artifacts
+    command: sleep infinity
+
+volumes:
+  elixir-artifacts: {}
+  db-new: {}

@@ -1,0 +1,22 @@
+.WdImgButtonRoot {
+  transition: opacity 200ms;
+  opacity: 0.5;
+  pointer-events: initial !important;
+
+  &.Disabled {
+    opacity: 0.3;
+    cursor: auto;
+  }
+
+  &:hover:not(&.Disabled) {
+    opacity: 1;
+  }
+}
+
+.Normal {
+  font-size: 12px;
+}
+
+.Large {
+  font-size: 16px;
+}

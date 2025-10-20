@@ -1,0 +1,28 @@
+.WHClassViewRoot {
+}
+
+.WHClassViewContent {
+  display: flex;
+  gap: 2px;
+
+  &.NoOffset {
+    gap: 4px;
+    align-items: center;
+  }
+}
+
+.WHClassName {
+  position: relative;
+  font-size: 10px;
+  font-weight: bold;
+  top: -2px;
+}
+
+.NoOffset {
+  *.WHClassName {
+    position: relative;
+    font-size: 12px;
+    font-weight: initial !important;
+    top: initial !important;
+  }
+}

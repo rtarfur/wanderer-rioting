@@ -1,0 +1,290 @@
+/* TODO all of this styles need for fixing
+     problems with PrimeFlex because of tailwind broke them
+
+     IMPORTANT: here should not be set any design - only original PrimeFlex behaviour
+     e.g. paddings, margins, positions and other.
+*/
+
+.p-virtualscroller {
+  position: relative;
+
+  .p-virtualscroller-spacer {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.p-tooltip {
+  position: absolute;
+}
+
+.p-menuitem, .p-menuitem-content {
+  height: 36px;
+  flex-grow: 1;
+}
+
+.p-menuitem > .p-menuitem-content > a {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 0 12px;
+}
+
+.p-contextmenu .p-menuitem {
+  position: relative;
+}
+
+.p-contextmenu .p-submenu-list {
+  position: absolute;
+  min-width: 100%;
+  z-index: 1;
+}
+
+.p-contextmenu .p-menuitem-link .p-submenu-icon {
+  margin-left: auto;
+}
+
+.p-contextmenu .p-submenu-list {
+  padding: 0.5rem 0;
+  //border: 0 none;
+  border-radius: 6px;
+  //border: 1px solid #383838;
+}
+
+.p-icon-field {
+  .p-inputtext {
+    width: 100%;
+  }
+
+  .p-input-icon {
+    right: 0.75rem;
+  }
+}
+
+.p-datatable-thead {
+  th, th.p-sortable-column {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 4px;
+  }
+}
+
+.p-selectable-row td {
+  padding: 4px 4px;
+}
+
+.p-datatable.p-datatable-sm .p-datatable-tbody > tr > td {
+  padding: 3px 4px;
+}
+
+.p-sortable-column > .p-column-header-content > span:last-child {
+  transform: scale(0.7);
+
+  & > svg {
+    margin-left: 4px;
+  }
+}
+
+.p-dropdown-label, .p-inputtext {
+  padding: 0.25rem 0.75rem;
+  font-size: 14px;
+}
+
+.p-dropdown-item {
+  padding: 0.25rem 0.5rem;
+  font-size: 14px;
+  width: 100%;
+
+  .p-dropdown-item-label {
+    width: 100%;
+  }
+}
+
+.p-dropdown-item-group {
+  padding: 0.25rem 0.75rem;
+  font-size: 14px;
+}
+
+.p-dropdown-trigger {
+  width: 14px;
+  margin: 0 12px;
+}
+
+.p-dropdown-empty-message {
+  padding: 0.25rem 0.5rem;
+}
+
+.p-autocomplete .p-autocomplete-multiple-container .p-autocomplete-token {
+  margin-right: 0 !important;
+}
+
+/* Fixed sizes of Input switch */
+.p-inputswitch {
+  width: 2.0rem;
+  height: 1.15rem;
+
+  .p-inputswitch-slider:before {
+    width: 0.8rem;
+    height: 0.8rem;
+    left: 0.14rem;
+    margin-top: -0.385rem;
+  }
+
+  &.p-highlight .p-inputswitch-slider:before {
+    transform: translateX(0.8rem);
+  }
+
+  &:not(.p-disabled):has(.p-inputswitch-input:hover) .p-inputswitch-slider {
+    background: rgb(255 255 255 / 21%);
+  }
+
+  &.p-highlight .p-inputswitch-slider {
+    background: #966d3d;
+  }
+}
+
+.p-datatable-wrapper {
+  height: 100%;
+  & {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+  }
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+}
+
+.p-datatable .p-datatable-tbody > tr.p-highlight {
+  background: initial;
+}
+
+.suppress-menu-behaviour {
+  pointer-events: none;
+
+  .p-menuitem-content {
+    pointer-events: initial;
+    background-color: initial !important;
+  }
+  .p-menuitem-content:hover {
+    background-color: initial !important;
+  }
+}
+
+
+.p-autocomplete .p-autocomplete-multiple-container:not(.p-disabled).p-focus {
+  box-shadow: 0 0 0 1px #335c7e;
+  border-color: #335c7e;
+}
+
+.p-inputtext:enabled:focus {
+  box-shadow: 0 0 0 1px #335c7e;
+  border-color: #335c7e;
+}
+
+.p-inputtext:enabled:hover {
+  border-color: #335c7e;
+}
+
+
+// --------------- TOAST
+.p-toast .p-toast-message {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  border-left: 4px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.p-toast .p-toast-message .p-toast-summary {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.p-toast .p-toast-message .p-toast-detail {
+  color: #c0c0c0;
+  font-size: 13px;
+}
+
+.p-toast .p-toast-icon-close {
+  color: #ffaa00;
+  transition: background 0.2s;
+}
+.p-toast .p-toast-icon-close:hover {
+  background: #333;
+  color: #fff;
+}
+
+.p-toast-message-success {
+  border-left-color: #f1c40f;
+}
+.p-toast-message-error {
+  border-left-color: #e74c3c;
+}
+.p-toast-message-info {
+  border-left-color: #3498db;
+}
+.p-toast-message-warn {
+  border-left-color: #e67e22;
+}
+
+.p-toast-message-success .p-toast-message-icon {
+  color: #f1c40f;
+}
+.p-toast-message-error .p-toast-message-icon {
+  color: #e74c3c;
+}
+.p-toast-message-info .p-toast-message-icon {
+  color: #3498db;
+}
+.p-toast-message-warn .p-toast-message-icon {
+  color: #e67e22;
+}
+
+.p-toast-message-success .p-toast-message-content {
+  border-left-color: #f1c40f;
+}
+
+.p-toast-message-error .p-toast-message-content {
+  border-left-color: #e74c3c;
+}
+
+.p-toast-message-info .p-toast-message-content {
+  border-left-color: #3498db;
+}
+
+.p-toast-message-warn .p-toast-message-content {
+  border-left-color: #e67e22;
+}
+
+.p-dialog-header-icon.p-dialog-header-close.p-link {
+  position: relative;
+  left: 6px;
+}

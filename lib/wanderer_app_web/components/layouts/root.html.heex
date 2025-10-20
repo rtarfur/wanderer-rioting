@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="csrf-token" content={get_csrf_token()} />
+    <.live_title suffix=" · Wanderer">
+      {assigns[:page_title] || "Welcome"}
+    </.live_title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
+
+    <link
+      href="https://web.ccpgamescdn.com/aws/webfonts/shentox/webfonts-2.0/Shentox-SemiBold.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://web.ccpgamescdn.com/aws/webfonts/shentox/webfonts-2.0/Shentox-Medium.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://web.ccpgamescdn.com/aws/webfonts/shentox/webfonts-2.0/Shentox-Light.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://web.ccpgamescdn.com/aws/webfonts/shentox/webfonts-2.0/Shentox-Regular.woff2"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+
+    <script defer phx-track-static type="module" src={~p"/assets/app.js"} crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=G-61PHLLS0LD"
+      crossorigin="anonymous"
+    >
+    </script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-61PHLLS0LD');
+    </script>
+  </head>
+  <body>
+    {@inner_content}
+  </body>
+</html>

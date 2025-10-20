@@ -1,0 +1,15 @@
+// import './tailwind.css';
+@use 'primereact/resources/primereact.min.css';
+@use 'primeicons/primeicons.css';
+
+
+@use "fixes";
+@use "prime-fixes";
+@use "custom-scrollbar";
+@use "tooltip";
+@use "context-menu";
+
+
+.fixedImportant {
+  position: fixed !important;
+}
