@@ -25,6 +25,11 @@ const THEME_BEHAVIORS: {
     nodeComponent: SolarSystemNodeTheme,
     connectionMode: ConnectionMode.Loose,
   },
+  riot: {
+    isPanAndDrag: false,
+    nodeComponent: SolarSystemNodeDefault,
+    connectionMode: ConnectionMode.Loose,
+  },
 };
 
 export function getBehaviorForTheme(themeName: string) {
