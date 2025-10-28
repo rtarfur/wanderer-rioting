@@ -157,9 +157,9 @@ defmodule WandererApp.Map.Server.Impl do
     state
   end
 
-  defdelegate add_system(state, system_info, user_id, character_id), to: SystemsImpl
+  defdelegate add_system(state, system_info, user_id, character_id, opts \\ []), to: SystemsImpl
 
-  defdelegate paste_systems(state, systems, user_id, character_id), to: SystemsImpl
+  defdelegate paste_systems(state, systems, user_id, character_id, opts), to: SystemsImpl
 
   defdelegate add_system_comment(state, comment_info, user_id, character_id), to: SystemsImpl
 
@@ -381,7 +381,9 @@ defmodule WandererApp.Map.Server.Impl do
       show_temp_system_name:
         options |> Map.get("show_temp_system_name", "false") |> String.to_existing_atom(),
       restrict_offline_showing:
-        options |> Map.get("restrict_offline_showing", "false") |> String.to_existing_atom()
+        options |> Map.get("restrict_offline_showing", "false") |> String.to_existing_atom(),
+      allowed_copy_for: options |> Map.get("allowed_copy_for", "admin"),
+      allowed_paste_for: options |> Map.get("allowed_paste_for", "member")
     ]
   end
 

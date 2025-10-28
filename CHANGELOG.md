@@ -2,25 +2,80 @@
 
 <!-- changelog -->
 
-## [v1.82.4](https://github.com/wanderer-industries/wanderer/compare/v1.82.3...v1.82.4) (2025-10-23)
+## [v1.83.3](https://github.com/wanderer-industries/wanderer/compare/v1.83.2...v1.83.3) (2025-10-27)
 
 
 
 
-## [v1.82.3](https://github.com/wanderer-industries/wanderer/compare/v1.82.2...v1.82.3) (2025-10-23)
+### Bug Fixes:
+
+* Core: Fixed old map API for systems & added small QOL improvements
+
+## [v1.83.2](https://github.com/wanderer-industries/wanderer/compare/v1.83.1...v1.83.2) (2025-10-22)
 
 
 
 
-## [v1.82.2](https://github.com/wanderer-industries/wanderer/compare/v1.82.1...v1.82.2) (2025-10-20)
+### Bug Fixes:
+
+* Connections: Set new connection time status based on to/from system class
+
+## [v1.83.1](https://github.com/wanderer-industries/wanderer/compare/v1.83.0...v1.83.1) (2025-10-21)
 
 
 
+
+### Bug Fixes:
+
+* Kills: Fixed zkb links (added following '/').
+
+## [v1.83.0](https://github.com/wanderer-industries/wanderer/compare/v1.82.3...v1.83.0) (2025-10-21)
+
+
+
+
+### Features:
+
+* Core: Added map roles settings for copy/paste
+
+* Core: Added map roles settings for copy/paste
+
+### Bug Fixes:
+
+* Map: Copy-Paste restriction: support from FE side - fixed problem with incorrect disabling copy and paste buttons
+
+* Map: Copy-Paste restriction: support from FE side - removed unnecessary constant
+
+* Map: Copy-Paste restriction: support from FE side
+
+* Core: Added Eve data downloaded files cleanup logic
+
+## [v1.82.3](https://github.com/wanderer-industries/wanderer/compare/v1.82.2...v1.82.3) (2025-10-21)
+
+
+
+
+### Bug Fixes:
+
+* Map: Fix system static info - add source region for U319 from Null-sec
+
+## [v1.82.2](https://github.com/wanderer-industries/wanderer/compare/v1.82.1...v1.82.2) (2025-10-21)
+
+
+
+
+### Bug Fixes:
+
+* Map: Fix system static info - for J012635 add D382; for J015092 - changed from J244, Z060 to N110, J244; for J000487 removed C008
 
 ## [v1.82.1](https://github.com/wanderer-industries/wanderer/compare/v1.82.0...v1.82.1) (2025-10-20)
 
 
 
+
+### Bug Fixes:
+
+* Core: Fixed 'viewer' map access & characters tracking
 
 ## [v1.82.0](https://github.com/wanderer-industries/wanderer/compare/v1.81.15...v1.82.0) (2025-10-15)
 
